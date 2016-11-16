@@ -3,7 +3,7 @@
 Introduces a %%salesforce magic.
 Connect to a salesforce, using beatbox and then issue SQL commands within IPython or IPython Notebook.
 
-![](https://github.com/eyaltrabelsi/ipython-salesforce/salesforce-y-u-no-work.jpg.png)
+![](https://github.com/eyaltrabelsi/ipython-salesforce/blob/master/salesforce-y-u-no-work.jpg.png)
 
 # Installing
 
