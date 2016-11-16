@@ -10,19 +10,19 @@ Connect to a salesforce, using beatbox and then issue SQL commands within IPytho
 
 Install the lastest release with:<br/>
     
-    pip install ipython-sql 
+    pip install ipython-salesforce 
 
 or download from https://github.com/eyaltrabelsi/ipython-salesforce and:<br/>
 
-    cd ipython-sql;
+    cd ipython-salesforce;
     sudo python setup.py install;
 
     
 Examples
 --------
 
-    In [1]: %load_ext sql
-    In [2]: %%sql postgresql://will:longliveliz@localhost/shakes
+    In [1]: %load_ext salesforce
+    In [2]: %%sql user,password,security_token
             select id from task
     In [3]: result = _
     In [4]: print(result)
