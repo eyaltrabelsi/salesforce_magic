@@ -19,7 +19,7 @@ setup(
     long_description=README,
     author='Eyal Trabelsi',
     author_email='eyaltrabelsi@gmail.com',
-    url='https://github.com/peterldowns/mypackage',  # use the URL to the github repo
+    url='https://github.com/eyaltrabelsi/ipython-salesforce',
     keywords=['sql', 'ipython', 'salesforce'],
     install_requires=install_requires
 )
