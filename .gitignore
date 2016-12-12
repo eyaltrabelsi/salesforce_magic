@@ -1,5 +1,5 @@
 .idea/
-sandbox/
-sandbox/*
 .idea
-ipython_salesforce.egg-info/
+*.egg-info
+dist
+build

@@ -1,7 +1,19 @@
 import itertools
-
 import beatbox
 import pandas as pd
+
+
+def query_salesforce(line, query=''):
+        """Runs SQL statement against a salesforce, using specified user,password and security token and beatbox.
+           If no user,password and security token has been given, an error will be raised
+           Examples::
+             %%salesforce user,password,security_token
+             SELECT id FROM task """
+        assert len(line.split(',')) == 3, 'You should specify 3 arguments:\nuser_id, password, security_token'
+        user, password, security_token = line.split(',')
+        sf = Salesforce(user, password, security_token)
+        df = sf.query(query, deleted_included=True)
+        return df
 
 
 class Salesforce(object):
@@ -62,3 +74,7 @@ class Salesforce(object):
             if first_iteration and sf_results:
                 header = self.get_columns_names(sf_results[0])
         return pd.DataFrame(res, columns=header)
+
+
+def load_ipython_extension(ipython):
+    ipython.register_magic_function(query_salesforce, 'cell', 'salesforce')

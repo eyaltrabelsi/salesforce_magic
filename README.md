@@ -1,31 +1,20 @@
-# ipython-salesforce
+# salesforce_magic
 
 Introduces a %%salesforce magic.
 Connect to a salesforce, using beatbox and then issue SQL commands within IPython or IPython Notebook.
 
-![](https://github.com/eyaltrabelsi/ipython-salesforce/blob/master/salesforce-y-u-no-work.jpg.png)
 
 # Installing
 
+1. download from https://github.com/eyaltrabelsi/salesforce_magic
+2. cd jupyter-salesforce
+3. python setup.py install
 
-Install the lastest release with:<br/>
-    
-    pip install ipython-salesforce 
+# Usage
 
-or download from https://github.com/eyaltrabelsi/ipython-salesforce and:<br/>
-
-    cd ipython-salesforce;
-    sudo python setup.py install;
-
-    
-Examples
---------
-
-    In [1]: %load_ext salesforce
-    In [2]: %%sql user,password,security_token
-            select id from task
-    In [3]: result = _
-    In [4]: print(result)
-   
+    In [1]: %load_ext salesforce_magic
+    In [2]: %%salesforce user,password,security_token
+            select id from account
    
 
+![](https://github.com/eyaltrabelsi/salesforce_magic/blob/master/salesforce-y-u-no-work.jpg.png)
